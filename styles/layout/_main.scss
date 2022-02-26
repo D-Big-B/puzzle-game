@@ -1,0 +1,53 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #9921e8;
+  background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  @include tablet {
+    &::after {
+      content: "Please Open this game in your Laptop or PC with web camera for best experience";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: $primary-font;
+      font-size: $heading3-text;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      padding: 2rem;
+
+      @include mobile {
+        font-size: $heading4-text;
+      }
+    }
+  }
+}
+
+section {
+  p {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $normal-text;
+  }
+}
+
+@include tablet {
+  display: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #0066cc;
+}

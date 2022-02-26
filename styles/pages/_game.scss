@@ -1,0 +1,46 @@
+.puzzle__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    display: none;
+  }
+
+  .main__puzzle {
+    width: fit-content;
+    height: fit-content;
+    border: 6px solid #f9b948;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.puzzle__timer {
+  position: absolute;
+  left: 15%;
+  top: 40%;
+  color: $primary-color;
+  font-family: $primary-font;
+  font-weight: 700;
+  border: 3px solid $primary-color;
+  padding: 1.3rem;
+
+  font-size: $heading3-text;
+  transform: translate(-50%, -50%);
+}
+
+.puzzle__level {
+  position: absolute;
+  top: 40%;
+  right: -5%;
+  font-size: $heading3-text;
+  font-family: $primary-font;
+  color: $primary-color;
+  border: 3px solid $primary-color;
+  padding: 1.3rem;
+  transform: translate(-50%, -50%);
+}

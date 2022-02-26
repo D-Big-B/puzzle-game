@@ -1,0 +1,83 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include tablet {
+    display: none;
+  }
+
+  &__login,
+  &__logout,
+  &__leaderBoard,
+  &__level {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    background-color: #f9b948;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: $normal-text;
+    font-family: $primary-font;
+    font-weight: 700;
+    color: royalblue;
+  }
+  &__leaderBoard {
+    right: 75%;
+  }
+  &__level {
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  &__logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30%;
+    align-items: center;
+    font-size: $heading4-text;
+    font-family: $primary-font;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+  &__button {
+    cursor: pointer;
+    background-color: #f9b948;
+    padding: 1rem 3rem;
+    font-size: $heading3-text;
+    font-family: $primary-font;
+    font-weight: 700;
+    border-radius: 100px;
+    border-bottom: 10px solid white;
+    box-shadow: 3px solid white;
+    transform-style: preserve-3d;
+
+    transition: all 0.8s linear;
+    animation: homeButton 0.8s linear infinite alternate;
+
+    &:hover {
+      animation: none;
+      transform: translateZ(10px);
+    }
+  }
+}
+
+@keyframes homeButton {
+  0% {
+    transform: scale(1) translateY(0px);
+  }
+  100% {
+    transform: scale(1.1) translateY(10px);
+  }
+}
