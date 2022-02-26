@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ACTIONS } from "../types";
 
-const BASE_URL = "http://localhost:3000/";
+const BASE_URL = "https://bigb-puzzle-backend.herokuapp.com/";
 
 export const getRanking = () => {
   return async (dispatch, getState) => {
